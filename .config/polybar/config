@@ -26,6 +26,7 @@ height = 27
 ;offset-y = 1%
 radius = 6.0
 fixed-center = true
+bottom = false
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -48,7 +49,7 @@ font-2 = siji:pixelsize=10;1
 
 modules-left = bspwm i3
 modules-center = date 
-modules-right = volume memory cpu wlan eth battery temperature powermenu
+modules-right = volume memory cpu wlan eth temperature battery powermenu
 
 tray-position = right
 tray-padding = 2
@@ -243,30 +244,43 @@ format-disconnected =
 
 [module/date]
 type = internal/date
-interval = 5
 
-date = %m-%d-%Y"
-date-alt = "%m-%d-%Y"
+; Seconds to sleep between updates
+interval = 1.0
 
+; See "man date" for details on how to format the date string
+; NOTE: if you want to use syntax tags here you need to use %%{...}
+date = %a %b %d, 
+
+; Optional time format
 time = %H:%M
+
+; if `date-alt` or `time-alt` is defined, clicking
+; the module will toggle between formats
+date-alt = %A, %d %B %Y
 time-alt = %H:%M:%S
 
-format-prefix = 
-format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #0a6cf5
-
-label = %time% | %date% 
+label = %date% %time%
+format = <label>
+;format-background = #88000000
+format-padding = 3
+format-underline = #f50a4d
 
 [module/volume]
 type = internal/volume
 
-format-volume = <label-volume> <bar-volume>
-label-volume = VOL
-label-volume-foreground = ${root.foreground}
+format-volume = <label-volume>
+;format-volume = <label-volume> <bar-volume>
+format-volume-prefix = "%{F#8a8a8a}volume%{F-} "
+;label-volume = volume
+label-volume = %percentage%%
+label-volume-foreground = ${colors.foreground}
 
-format-muted-prefix = " "
+format-volume-underline = #303F9F
+
+format-muted-prefix = "muted "
 format-muted-foreground = ${colors.foreground-alt}
-label-muted = sound muted
+label-muted = %percentage%%
 
 bar-volume-width = 10
 bar-volume-foreground-0 = #55aa55
