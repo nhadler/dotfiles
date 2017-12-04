@@ -191,3 +191,4 @@ set_from_resource $bg i3wm.color2 #f0f0f0
 
 exec --no-startup-id nm-applet
 exec --no-startup-id redshift
+exec --no-startup-id ~/.config/polybar/polybar_launch.sh
