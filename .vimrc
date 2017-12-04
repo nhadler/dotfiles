@@ -1,5 +1,7 @@
 call plug#begin('~/.vim/plugged')
 Plug 'junegunn/goyo.vim'
+Plug 'machakann/vim-sandwich'
+Plug 'chaoren/vim-wordmotion'
 Plug 'tpope/vim-commentary'
 Plug 'rhysd/vim-grammarous'
 Plug 'reedes/vim-pencil'
