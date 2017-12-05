@@ -166,11 +166,12 @@ exec --no-startup-id wal -ti ~/Pictures/mystic-mountains-1920×1080.jpg
 
 bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute
 bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 
 bindsym XF86MonBrightnessUp exec light -A 5 # increase screen brightness
 bindsym XF86MonBrightnessDown exec light -U 5 # decrease screen brightness
 
-smart_gaps on
+# smart_gaps on
 
 # Set colors from Xresources
 # Change 'color7' and 'color2' to whatever colors you want i3 to use 
@@ -186,9 +187,13 @@ set_from_resource $bg i3wm.color2 #f0f0f0
  client.unfocused        $bg     $bg     $fg  $bg       $bg
  client.urgent           $bg     $bg     $fg  $bg       $bg
  client.placeholder      $bg     $bg     $fg  $bg       $bg
-
  client.background       $bg
 
 # exec --no-startup-id nm-applet
 exec --no-startup-id redshift
-exec ~/.config/polybar/polybar_launch.sh
+exec --no-startup-id ~/.config/polybar/polybar_launch.sh
+
+# Media player controls
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+bindsym XF86AudioPlay exec playerctl play-pause
