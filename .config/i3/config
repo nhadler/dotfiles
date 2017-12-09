@@ -197,3 +197,5 @@ exec --no-startup-id ~/.config/polybar/polybar_launch.sh
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 bindsym XF86AudioPlay exec playerctl play-pause
+
+bindsym $mod+t exec /bin/i3lock-custom.sh 
