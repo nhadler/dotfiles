@@ -250,10 +250,10 @@ interval = 1.0
 
 ; See "man date" for details on how to format the date string
 ; NOTE: if you want to use syntax tags here you need to use %%{...}
-date = %a %b %d, 
+date = %A %b %d, 
 
 ; Optional time format
-time = %H:%M
+time = %I:%M %p
 
 ; if `date-alt` or `time-alt` is defined, clicking
 ; the module will toggle between formats
