@@ -30,9 +30,9 @@ font pango:monospace 8
 floating_modifier $mod
 
 # start nfirefox
-bindsym $mod+Shift+f exec firefox
+bindsym $mod+Shift+f exec firefox-beta
 # start a terminal
-bindsym $mod+Return exec terminator
+bindsym $mod+Return exec termite
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -162,10 +162,10 @@ for_window [class="^.*"] border pixel 0
 gaps inner 10
 gaps outer 10
 
-exec --no-startup-id wal -ti ~/Pictures/mystic-mountains-1920×1080.jpg
+exec --no-startup-id feh --bg-scale ~/Pictures/mystic-mountains-1920×1080.jpg
 
-bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute
-bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +1% 
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -1%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 
 bindsym XF86MonBrightnessUp exec light -A 5 # increase screen brightness
@@ -198,4 +198,4 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 bindsym XF86AudioPlay exec playerctl play-pause
 
-bindsym $mod+t exec /bin/i3lock-custom.sh 
+bindsym $mod+t exec ~/.config/i3/i3lock-custom.sh
