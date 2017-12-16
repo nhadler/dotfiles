@@ -58,4 +58,6 @@ let g:vimtex_view_method = 'zathura'
 autocmd BufRead,BufNewFile *.tex setlocal spell
 
 autocmd BufRead,BufNewFile *.tex,*.ref noremap <buffer> <F7> :PencilToggle <cr>
+
 let g:vimtex_compiler_latexmk = {'callback' : 0}
+let g:vimtex_view_method = 'zathura'

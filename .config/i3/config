@@ -162,12 +162,15 @@ for_window [class="^.*"] border pixel 0
 gaps inner 10
 gaps outer 10
 
+# Sets wallpaper
 exec --no-startup-id feh --bg-scale ~/Pictures/mystic-mountains-1920×1080.jpg
 
+# Volume Controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +1% 
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -1%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 
+# Backlight controls
 bindsym XF86MonBrightnessUp exec light -A 5 # increase screen brightness
 bindsym XF86MonBrightnessDown exec light -U 5 # decrease screen brightness
 
@@ -198,4 +201,8 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 bindsym XF86AudioPlay exec playerctl play-pause
 
+# Keycombine for Locking
 bindsym $mod+t exec ~/.config/i3/i3lock-custom.sh
+
+# Xautolock
+exec --no-startup-id xautolock -time 15 -locker '~/.config/i3/i3lock-custom.sh'
