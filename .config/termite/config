@@ -32,29 +32,43 @@ filter_unmatched_urls = true
 #modify_other_keys = false
 
 [colors]
-foreground = #D8DEE9
-background = #2E3440
-foreground_bold = #D8DEE9
-cursor = #D8DEE9
-cursor_foreground = #2E3440
-highlight = #4C566A
+foreground = #d8dee8
+background = #2f343f
+foreground_bold = #d0d6e0
+cursor = #b48ead
+cursor_foreground = #d8dee8
 
-color0  = #3B4252
-color1  = #BF616A
-color2  = #A3BE8C
-color3  = #EBCB8B
-color4  = #81A1C1
-color5  = #B48EAD
-color6  = #88C0D0
-color7  = #E5E9F0
-color8  = #4C566A
-color9  = #BF616A
-color10 = #A3BE8C
-color11 = #EBCB8B
-color12 = #81A1C1
-color13 = #B48EAD
-color14 = #8FBCBB
-color15 = #ECEFF4
+# black
+color0  = #4b5262
+color8  = #434a5a
+
+# red
++color1  = #bf616a
+color9  = #b3555e
+
+# green
+color2  = #a3be8c
+color10 = #93ae7c
+
+# yellow
+color3  = #ebcb8b
+color11 = #dbbb7b
+
+# blue
+color4  = #81a1c1
+color12 = #7191b1
+
+# magenta
+color5  = #b48ead
+color13 = #a6809f
+
+# cyan
+color6  = #88c0d0
+color14 = #76aebe
+
+# white
+color7  = #e5e9f0
+color15 = #d1d5dc
 
 [hints]
 # font = Monospace 16
