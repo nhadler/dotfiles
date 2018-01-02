@@ -32,7 +32,7 @@ floating_modifier $mod
 # start nfirefox
 bindsym $mod+Shift+f exec firefox-beta
 # start a terminal
-bindsym $mod+Return exec termite -e fish
+bindsym $mod+Return exec urxvt -e fish
 
 # kill focused window
 bindsym $mod+Shift+q kill
