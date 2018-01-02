@@ -27,16 +27,16 @@ set laststatus=2
 set noshowmode
 
 colorscheme nord
+let g:airline#extensions#tabline#enabled = 1
 
-autocmd BufRead,BufNewFile *.py noremap <buffer> <F7> :exec 'w !python' shellescape(@%, 1)<cr>
 inoremap jj <Esc>`^
 
-let python_highlight_all = 1
 let g:airline_powerline_fonts = 1
 
 set foldmethod=indent
 set foldlevel=99
 
+" python settings
 au BufNewFile,BufRead *.py
     \ set tabstop=4|
     \ set softtabstop=4|
@@ -45,15 +45,17 @@ au BufNewFile,BufRead *.py
     \ set expandtab|
     \ set autoindent|
     \ set fileformat=unix
-
+autocmd BufRead,BufNewFile *.py noremap <buffer> <F7> :exec 'w !python' shellescape(@%, 1)<cr>
 autocmd FileType python setlocal completeopt-=preview
+let python_highlight_all = 1
 
-let g:airline#extensions#tabline#enabled = 1
+" .tex file options
 let g:vimtex_view_method = 'zathura'
-
 autocmd BufRead,BufNewFile *.tex setlocal spell
-
 autocmd BufRead,BufNewFile *.tex,*.ref noremap <buffer> <F7> :PencilToggle <cr>
-
 let g:vimtex_compiler_latexmk = {'callback' : 0}
 let g:vimtex_view_method = 'zathura'
+augroup pencil
+  autocmd!
+  autocmd FileType tex call pencil#init()
+augroup END
