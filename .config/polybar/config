@@ -20,6 +20,17 @@ nord13 = #EBCB8B
 nord14 = #A3BE8C
 nord15 = #B48EAD
 
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = AC
+full-at = 98
+
+format-charging = CHARGING <label-charging>
+
+format-discharging = BATTERY <label-discharging>
+
 [module/bspwm]
 type = internal/bspwm
 
@@ -49,23 +60,19 @@ label-mode-padding = 2
 label-mode-foreground = #000
 label-mode-background = ${colors.nord4}
 
-; focused = Active workspace on focused monitor
 label-focused = %index%
 label-focused-background = ${module/bspwm.label-focused-background}
 label-focused-underline = ${module/bspwm.label-focused-underline}
 label-focused-padding = ${module/bspwm.label-focused-padding}
 
-; unfocused = Inactive workspace on any monitor
 label-unfocused = %index%
 label-unfocused-padding = ${module/bspwm.label-occupied-padding}
 
-; visible = Active workspace on unfocused monitor
 label-visible = %index%
 label-visible-background = ${self.label-focused-background}
 label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
 
-; urgent = Workspace with urgency hint set
 label-urgent = %index%
 label-urgent-background = ${module/bspwm.label-urgent-background}
 label-urgent-padding = ${module/bspwm.label-urgent-padding}
@@ -87,6 +94,11 @@ type = internal/memory
 interval = 1.0
 label = "RAM %gb_used% / %gb_total%"
 
+[module/volume]
+type = internal/volume
+format-volume = VOL <label-volume>
+label-muted = MUTED %percentage%%
+
 [bar/dock]
 locale = en_US.UTF-8
 font-0 = "Source Code Pro:size=9:weight=Regular"
@@ -104,8 +116,8 @@ padding-right = 1
 separator = " | "
 
 modules-left = i3
-modules-center = 
-modules-right = cpu memory date
+modules-center = date
+modules-right = volume cpu memory battery
 
 [settings]
 screenchange-reload = true
