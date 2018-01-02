@@ -11,13 +11,12 @@ Plug 'chaoren/vim-wordmotion'
 Plug 'tpope/vim-commentary'
 Plug 'rhysd/vim-grammarous'
 Plug 'reedes/vim-pencil'
-Plug 'arcticicestudio/nord-vim'
 Plug 'w0rp/ale'
 Plug 'lervag/vimtex'
 Plug 'tpope/vim-fugitive'
 Plug 'davidhalter/jedi-vim'
 Plug 'ajh17/VimCompletesMe'
-Plug 'morhetz/gruvbox'
+Plug 'arcticicestudio/nord-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'scrooloose/nerdtree'
 Plug 'tmhedberg/SimpylFold'
@@ -26,11 +25,8 @@ call plug#end()
 set relativenumber number
 set laststatus=2
 set noshowmode
-set termguicolors
 
-let g:gruvbox_contrast_dark = 'hard'
-colorscheme gruvbox
-set background=dark 
+colorscheme nord
 
 autocmd BufRead,BufNewFile *.py noremap <buffer> <F7> :exec 'w !python' shellescape(@%, 1)<cr>
 inoremap jj <Esc>`^
