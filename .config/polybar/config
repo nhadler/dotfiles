@@ -28,7 +28,6 @@ adapter = AC
 full-at = 98
 
 format-charging = CHARGING <label-charging>
-
 format-discharging = BATTERY <label-discharging>
 
 [module/bspwm]
@@ -92,12 +91,21 @@ label = "%date% - %time%"
 [module/memory]
 type = internal/memory
 interval = 1.0
-label = "RAM %gb_used% / %gb_total%"
+label = RAM %percentage_used%% 
 
 [module/volume]
 type = internal/volume
 format-volume = VOL <label-volume>
 label-muted = MUTED %percentage%%
+
+[module/wlan]
+type = internal/network
+interface = wlp58s0
+interval = 3.0
+
+format-connected = <label-connected>
+label-connected = %essid%
+format-disconnected =
 
 [bar/dock]
 locale = en_US.UTF-8
@@ -117,7 +125,7 @@ separator = " | "
 
 modules-left = i3
 modules-center = date
-modules-right = volume cpu memory battery
+modules-right = volume cpu memory wlan battery
 
 [settings]
 screenchange-reload = true
