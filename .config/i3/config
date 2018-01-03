@@ -30,7 +30,7 @@ font pango:monospace 8
 floating_modifier $mod
 
 # start nfirefox
-bindsym $mod+Shift+f exec firefox-beta
+bindsym $mod+Shift+Return exec firefox-beta
 # start a terminal
 bindsym $mod+Return exec urxvt -e fish
 
