@@ -27,8 +27,8 @@ battery = BAT0
 adapter = AC
 full-at = 98
 
-format-charging = CHARGING <label-charging>
-format-discharging = BATTERY <label-discharging>
+format-charging = CHRG <label-charging>
+format-discharging = BATT <label-discharging>
 
 [module/bspwm]
 type = internal/bspwm
@@ -103,7 +103,7 @@ type = internal/network
 interface = wlp58s0
 interval = 3.0
 
-format-connected = <label-connected>
+format-connected = WLAN <label-connected>
 label-connected = %essid%
 format-disconnected =
 
