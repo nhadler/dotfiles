@@ -29,6 +29,7 @@ full-at = 98
 
 format-charging = CHRG <label-charging>
 format-discharging = BATT <label-discharging>
+format-full= BATT <label-full>
 
 [module/bspwm]
 type = internal/bspwm
