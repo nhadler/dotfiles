@@ -210,3 +210,6 @@ exec --no-startup-id xautolock -time 15 -locker '~/.config/i3/i3lock-custom.sh'
 
 # screenshot for PrtScr
 bindsym Print exec import -window root ~/Pictures/screenshots/$(date '+%Y%m%d-%H%M%S').png
+
+# compton shadows
+exec --no-startup-id compton -cCGb --config ~/.compton.conf
