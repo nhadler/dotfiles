@@ -39,3 +39,5 @@ URxvt.termName: xterm-256color
 *.color7:       #c0c5ce
 *.color15:      #eff1f5
 
+*internalBorder:        2
+*externalBorder:        1
