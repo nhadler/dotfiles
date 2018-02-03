@@ -109,6 +109,7 @@ label-connected = %essid%
 format-disconnected =
 
 [bar/dock]
+monitor = ${env:MONITOR:}
 locale = en_US.UTF-8
 font-0 = "Source Code Pro:size=9:weight=Regular"
 
