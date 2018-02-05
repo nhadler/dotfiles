@@ -1,0 +1,10 @@
+set selection-clipboard clipboard
+
+set default-bg "#22242D"
+set recolor "false"
+set recolor-darkcolor "#D3DAE3"
+set recolor-lightcolor "#2F343F"
+
+umap t
+map t toggle_statusbar 
+
