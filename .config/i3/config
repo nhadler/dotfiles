@@ -205,6 +205,9 @@ bindsym XF86AudioPlay exec playerctl play-pause
 # Keycombine for Locking
 bindsym $mod+t exec ~/.config/i3/i3lock-custom.sh
 
+# Keycombine for Locking
+bindsym $mod+Shift+w exec '~/.config/rofi-wifi-menu/rofi-wifi-menu.sh'
+
 # Xautolock
 exec --no-startup-id xautolock -time 15 -locker '~/.config/i3/i3lock-custom.sh'
 
