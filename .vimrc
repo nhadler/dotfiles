@@ -24,6 +24,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'reedes/vim-pencil'
 Plug 'kana/vim-textobj-user'
 Plug 'reedes/vim-textobj-quote'
+Plug 'machakann/vim-highlightedyank'
 call plug#end()
 
 set relativenumber number
