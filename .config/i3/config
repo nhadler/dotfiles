@@ -45,6 +45,9 @@ bindsym $mod+Shift+q kill
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 bindsym $mod+d exec rofi -show run
 
+# launch wifi dmenu
+bindsym $mod+Shift+d exec networkmanager_dmenu
+
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
