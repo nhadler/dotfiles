@@ -171,8 +171,7 @@ gaps inner 10
 gaps outer 10
 
 # Sets wallpaper
-exec --no-startup-id feh --bg-scale ~/Pictures/wallpapers/101234-1920x1080.jpg
-
+exec --no-startup-id feh --bg-scale ~/Pictures/wallpapers/32-v9mnBmP.jpg
 # Volume Controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +2% 
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -2%
