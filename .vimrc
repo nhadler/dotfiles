@@ -35,6 +35,7 @@ set foldmethod=manual
 
 colorscheme nord
 hi visual term=bold,reverse ctermfg=6 ctermbg=8 guifg=#88C0D0 guibg=#4C566A
+hi SpellBad term=bold,reverse ctermfg=5 ctermbg=11 guifg=#E5E9F0 guibg=#BF616A
 
 let g:airline#extensions#tabline#enabled = 1
 
@@ -76,6 +77,7 @@ augroup conceal
   autocmd FileType tex,bib set conceallevel=0
 augroup END
 autocmd FileType tex :NoMatchParen
+autocmd FileType tex :set spell
 autocmd FileType tex :set lazyredraw
 au FileType tex setlocal nocursorline
 
